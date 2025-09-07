@@ -1,0 +1,158 @@
+<!DOCTYPE html><html><head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="godarna">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>godarna</title>
+  <link rel="manifest" href="manifest.json">
+  <!-- Google Maps JavaScript API: IMPORTANT - replace YOUR_GOOGLE_MAPS_API_KEY with your real key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCahlyQcJ05H8etPgEapc0MNNB2Zz6gvyA&amp;libraries=places"></script>
+  
+  <!-- Fonts: Cairo (RTL-friendly) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  
+  
+  
+  
+  <style id="splash-screen-style">
+    html {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(180deg, #FFE9D8A6 0%, #FFF3EBD0 50%, #FFD4AF37 100%);
+      background-size: 100% 100%;
+      font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    /* Moroccan ornament overlay */
+    .ornament {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      opacity: 0.48;
+      pointer-events: none;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+    }
+
+    .ornament.tl { top: 20px; left: 20px; }
+    .ornament.tr { top: 20px; right: 20px; }
+    .ornament.bl { bottom: 20px; left: 20px; }
+    .ornament.br { bottom: 20px; right: 20px; }
+    .ornament.tc { top: 20px; left: 50%; transform: translateX(-50%); }
+    .ornament.bc { bottom: 20px; left: 50%; transform: translateX(-50%); }
+    .ornament.ml { left: 20px; top: 50%; transform: translateY(-50%); }
+    .ornament.mr { right: 20px; top: 50%; transform: translateY(-50%); }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(180deg, #FF6E5A12 0%, #FF8C7420 50%, #FFB8962B 100%);
+      }
+    }
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+  </script>
+</head>
+<body>
+  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+  </picture>
+  <!-- Moroccan golden ornaments -->
+  <img class="ornament tl" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament tr" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament bl" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament br" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament tc" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament bc" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament ml" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  <img class="ornament mr" src="splash/moroccan_ornament.svg" alt="" aria-hidden="true" />
+  
+  
+  <script src="flutter_bootstrap.js" async=""></script>
+
+
+</body></html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Golden gradient background (v21) -->
+    <item>
+        <inset android:insetLeft="0dp" android:insetTop="0dp" android:insetRight="0dp" android:insetBottom="0dp">
+            <shape android:shape="rectangle">
+                <gradient
+                    android:type="linear"
+                    android:angle="270"
+                    android:startColor="#FFE9D8A6"
+                    android:centerColor="#FFF3EBD0"
+                    android:endColor="#FFD4AF37"
+                    android:centerY="0.5"/>
+            </shape>
+        </inset>
+    </item>
+
+    <!-- Moroccan ornaments (denser layout: 3x3 grid positions) (v21) -->
+    <!-- center -->
+    <item android:drawable="@drawable/moroccan_star" android:gravity="center"/>
+    <!-- corners -->
+    <item android:drawable="@drawable/moroccan_star" android:top="24dp" android:left="24dp"/>
+    <item android:drawable="@drawable/moroccan_star" android:top="24dp" android:right="24dp"/>
+    <item android:drawable="@drawable/moroccan_star" android:bottom="24dp" android:left="24dp"/>
+    <item android:drawable="@drawable/moroccan_star" android:bottom="24dp" android:right="24dp"/>
+    <!-- edges center -->
+    <item android:drawable="@drawable/moroccan_star" android:top="24dp" android:gravity="center_horizontal"/>
+    <item android:drawable="@drawable/moroccan_star" android:bottom="24dp" android:gravity="center_horizontal"/>
+    <item android:drawable="@drawable/moroccan_star" android:left="24dp" android:gravity="center_vertical"/>
+    <item android:drawable="@drawable/moroccan_star" android:right="24dp" android:gravity="center_vertical"/>
+
+    <!-- Centered logo on top -->
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/splash"/>
+    </item>
+</layer-list>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Outer square -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#33D4AF37"
+        android:strokeWidth="2"
+        android:pathData="M20,20 L80,20 L80,80 L20,80 Z" />
+
+    <!-- Rotated square to form 8-point star -->
+    <group android:pivotX="50" android:pivotY="50" android:rotation="45">
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#4DD4AF37"
+            android:strokeWidth="2"
+            android:pathData="M20,20 L80,20 L80,80 L20,80 Z" />
+    </group>
+
+    <!-- Inner accent square -->
+    <group android:pivotX="50" android:pivotY="50">
+        <path
+            android:fillColor="#12D4AF37"
+            android:strokeColor="#26D4AF37"
+            android:strokeWidth="1.2"
+            android:pathData="M38,38 L62,38 L62,62 L38,62 Z" />
+    </group>
+</vector>
